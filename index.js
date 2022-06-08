@@ -14,7 +14,7 @@ app.get('/', async function(req, res){
   res.json(pagina_inicial);
 });
 
-//Rotas para usuários
+//Rotas para livros
 
 app.get("/livros/:id", async function(req, res){
   const resultado = await livro.findByPk(req.params.id);
@@ -48,7 +48,7 @@ app.get("/livros/:id/autor", async function(req, res){
   res.json(resultado.autores)
 });
 
-//Rotas para empresas
+//Rotas para autores
 
 app.get("/autores/:id", async function(req, res){
   const resultado = await autor.findByPk(req.params.id);
